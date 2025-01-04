@@ -119,7 +119,7 @@ static size_t pad(const uint8_t *message, size_t size, uint8_t **padded) {
 
 // taken from
 // https://stackoverflow.com/questions/10134805/bitwise-rotate-left-function
-static uint32_t rotl(const uint32_t value, int shift) {
+static uint32_t rotl(uint32_t value, int shift) {
     if ((shift &= sizeof(value) * 8 - 1) == 0)
         return value;
     return (value << shift) | (value >> (sizeof(value) * 8 - shift));
